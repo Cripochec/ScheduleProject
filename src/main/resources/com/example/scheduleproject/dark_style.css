@@ -1,0 +1,116 @@
+.fon{
+    -fx-background-color: linear-gradient(to top, #8b8b8b, #486f49);
+    -fx-font-family: System;
+} 
+
+.iconImage{
+    -fx-image: url('logo_dark.png');
+    -fx-opacity: .12;
+}
+
+.h1{
+    -fx-font-size: 20px;
+}
+
+.button{
+    -fx-background-color: #376b407e;
+    -fx-font-size: 12px;
+    -fx-opacity: 0.80;
+    -fx-background-radius: 10;
+}
+
+.closeBut{
+    -fx-background-color: none;
+    -fx-font-size: 15px;
+}
+
+.input{
+    -fx-background-color: #55775e;
+    -fx-background-radius: 7;
+    -fx-font-size: 15px;
+}
+
+.info{
+    -fx-font-size: 14px;
+    -fx-text-fill: #eb5643;
+    -fx-alignment: center;
+}
+
+.menBut{
+    -fx-background-color: none;
+    -fx-font-size: 25px;
+}
+
+.blackout{
+    -fx-background-color: #363636;
+    -fx-opacity: .42;
+}
+
+.schedul{
+    -fx-alignment: top-left;
+}
+
+.fonMenu{
+    -fx-background-color: linear-gradient(to top, #8b8b8b, #486f49);
+    -fx-background-radius: 5;
+}
+
+.text1{
+    -fx-font-size: 15px;
+    -fx-textFill: #adabab;
+}
+
+.input1{
+    -fx-background-color: #718a77;
+    -fx-background-radius: 7;
+    -fx-textFill: #adabab;
+    -fx-font-size: 12px;
+}
+
+
+
+ScrollPane {
+    -fx-fit-to-width: true;
+    -fx-opacity: 0.80;
+}
+
+ScrollPane .scroll-bar {
+    -fx-background-color: #90ad97;
+    -fx-background-radius: 7;
+}
+
+.scroll{
+    -fx-background-color: linear-gradient(to top, #848884, #748174);
+}
+
+.check-box .box {
+    -fx-background-radius: 20;
+    -fx-background-color: #90ad97;
+}
+
+.check-box:selected .box {
+    -fx-background-color: rgb(190, 255, 181);
+}
+
+.check-box .text {
+    /* -fx-fill: #dddddd; */
+    -fx-font-size: 12px;
+}
+
+.check-box:selected .text {
+    -fx-strikethrough: true;
+}
+
+#rootPane .fon,
+#rootPane .h1,
+#rootPane .button,
+#rootPane .closeBut,
+#rootPane .input,
+#rootPane .input.prompt-text,
+#rootPane .menBut,
+#rootPane .text1,
+#rootPane .input1,
+#rootPane .schedul,
+#rootPane .check-box .text {
+    -fx-text-fill: #ffffff;
+}

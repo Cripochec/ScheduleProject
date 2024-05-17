@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onMousePressed="#onMousePressed" onMouseDragged="#onMouseDragged" maxHeight="-Infinity"
+            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0"
+            styleClass="fon" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scheduleproject.loginsController">
+   <Text fill="#464646" layoutX="203.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h1"
+         text="Вход" textAlignment="CENTER" textOrigin="CENTER"/>
+   <Text layoutX="163.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="Schedule RSVPU,  Biryukov © 2023.">
+      <font>
+         <Font size="8.0"/>
+      </font>
+   </Text>
+   <Button onAction="#signUp" fx:id="signUp" layoutX="190.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0"
+           text="Войти" textAlignment="CENTER"/>
+   <Button onAction="#registrations" fx:id="registrations" layoutX="321.0" layoutY="32.0" mnemonicParsing="false" prefHeight="27.0"
+           prefWidth="94.0" text="Регистрация"/>
+   <TextField fx:id="login" layoutX="143.0" layoutY="100.0" prefHeight="29.0" prefWidth="165.0" promptText="Логин"
+              styleClass="input"/>
+   <PasswordField fx:id="password" layoutX="143.0" layoutY="139.0" prefHeight="29.0" prefWidth="165.0"
+                  promptText="Пароль" styleClass="input"/>
+   <Label fx:id="notification" alignment="CENTER" layoutX="104.0" layoutY="226.0" prefHeight="27.0" prefWidth="243.0"
+          styleClass="info" textAlignment="CENTER" textFill="#eb5643"/>
+   <ImageView fitHeight="49.0" fitWidth="43.0" layoutX="31.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true"
+              styleClass="iconImage"/>
+   <Button onAction="#closeBut" fx:id="closeBut" layoutX="416.0" mnemonicParsing="false" styleClass="closeBut" text="❌"/>
+</AnchorPane>

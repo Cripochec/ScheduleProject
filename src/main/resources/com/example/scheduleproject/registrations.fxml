@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onMousePressed="#onMousePressed" onMouseDragged="#onMouseDragged" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" styleClass="fon"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.scheduleproject.registrationsController">
+   <Text fill="#464646" layoutX="166.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h1"
+         text="Регистрация" textAlignment="CENTER" textOrigin="CENTER"/>
+   <Button onAction="#signUp" fx:id="signUp" layoutX="361.0" layoutY="32.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="54.0"
+           text="Вход"/>
+   <Label fx:id="notification" alignment="CENTER" layoutX="102.0" layoutY="249.0" prefHeight="27.0" prefWidth="243.0"
+          styleClass="info" textAlignment="CENTER" textFill="#eb5643"/>
+   <ComboBox fx:id="groups" layoutX="233.0" layoutY="97.0" prefHeight="31.0" prefWidth="165.0" promptText="Группа"
+             styleClass="input"/>
+   <PasswordField fx:id="password2" layoutX="48.0" layoutY="174.0" prefHeight="29.0" prefWidth="165.0"
+                  promptText="Повторите пароль" styleClass="input"/>
+   <PasswordField fx:id="password1" layoutX="48.0" layoutY="136.0" prefHeight="29.0" prefWidth="165.0"
+                  promptText="Пароль" styleClass="input"/>
+   <TextField fx:id="login" layoutX="48.0" layoutY="97.0" prefHeight="29.0" prefWidth="165.0" promptText="Логин"
+              styleClass="input"/>
+   <Button onAction="#registrations" fx:id="registrations" layoutX="156.0" layoutY="215.0" mnemonicParsing="false" prefHeight="27.0"
+           prefWidth="134.0" text="Зарегистрироваться"/>
+   <Text layoutX="163.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="Schedule RSVPU,  Biryukov © 2023.">
+      <font>
+         <Font size="8.0"/>
+      </font>
+   </Text>
+   <ComboBox fx:id="subgroups" layoutX="233.0" layoutY="136.0" prefHeight="31.0" prefWidth="165.0"
+             promptText="Подгруппа" styleClass="input">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Нет"/>
+            <String fx:value="1"/>
+            <String fx:value="2"/>
+            <String fx:value="3"/>
+         </FXCollections>
+      </items>
+   </ComboBox>
+   <Button onAction="#closeBut" fx:id="closeBut" layoutX="416.0" mnemonicParsing="false" styleClass="closeBut" text="❌"/>
+   <ImageView fitHeight="49.0" fitWidth="43.0" layoutX="30.0" layoutY="22.0" opacity="0.12" pickOnBounds="true"
+              preserveRatio="true">
+      <Image url="@logo.png"/>
+   </ImageView>
+</AnchorPane>

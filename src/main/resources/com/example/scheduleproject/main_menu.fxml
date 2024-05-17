@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="400.0" prefWidth="535.0"
+            styleClass="fon" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.scheduleproject.main_menuController">
+    <Button fx:id="pn" layoutX="36.0" layoutY="49.0" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false"
+            onAction="#pn" prefHeight="40.0" prefWidth="40.0" text="ПН"/>
+    <Button fx:id="vt" layoutX="36.0" layoutY="98.0" mnemonicParsing="false" onAction="#vt" prefHeight="40.0"
+            prefWidth="40.0" text="ВТ"/>
+    <Button fx:id="sr" layoutX="36.0" layoutY="147.0" mnemonicParsing="false" onAction="#sr" prefHeight="40.0"
+            prefWidth="40.0" text="СР"/>
+    <Button fx:id="ct" layoutX="36.0" layoutY="196.0" mnemonicParsing="false" onAction="#ct" prefHeight="40.0"
+            prefWidth="40.0" text="ЧТ"/>
+    <Button fx:id="pt" layoutX="36.0" layoutY="245.0" mnemonicParsing="false" onAction="#pt" prefHeight="40.0"
+            prefWidth="40.0" text="ПТ"/>
+    <Button fx:id="sb" layoutX="36.0" layoutY="294.0" mnemonicParsing="false" onAction="#sb" prefHeight="40.0"
+            prefWidth="40.0" text="СБ"/>
+    <Button fx:id="vs" layoutX="36.0" layoutY="343.0" mnemonicParsing="false" onAction="#vs" prefHeight="40.0"
+            prefWidth="40.0" text="ВС"/>
+    <Button fx:id="closeBut" layoutX="500.0" mnemonicParsing="false" onAction="#closeBut" styleClass="closeBut"
+            text="❌"/>
+    <Button fx:id="menuBut" layoutX="30.0" layoutY="-3.0" mnemonicParsing="false" onAction="#menuBut"
+            styleClass="menBut" text="≡">
+        <opaqueInsets>
+            <Insets right="2.0"/>
+        </opaqueInsets>
+    </Button>
+    <Label fx:id="schedulDay" layoutX="93.0" layoutY="74.0" prefHeight="162.0" prefWidth="403.0" styleClass="text1"/>
+    <Label layoutX="96.0" layoutY="237.0" styleClass="text1" text="Задачи:"/>
+    <Button fx:id="rightBut" layoutX="506.0" layoutY="55.0" mnemonicParsing="false" onAction="#rightBut" opacity="0.58"
+            prefHeight="322.0" prefWidth="25.0" text="&gt;"/>
+    <Button fx:id="leftBut" layoutX="5.0" layoutY="55.0" mnemonicParsing="false" onAction="#leftBut" opacity="0.58"
+            prefHeight="322.0" prefWidth="25.0" text="&lt;"/>
+    <Label fx:id="dateWeek" layoutX="93.0" layoutY="31.0" styleClass="text1"/>
+    <ScrollPane layoutX="96.0" layoutY="261.0" prefHeight="93.0" prefWidth="393.0" styleClass="scroll">
+        <content>
+            <VBox fx:id="taskContainer" prefHeight="93.0" prefWidth="391.0" styleClass="scroll"/>
+        </content>
+    </ScrollPane>
+    <Button fx:id="addTaskBut" layoutX="414.0" layoutY="364.0" mnemonicParsing="false" onAction="#addTaskBut"
+            prefHeight="25.0" prefWidth="75.0" text="Добавить "/>
+    <TextField fx:id="taskTextField" layoutX="96.0" layoutY="364.0" prefHeight="25.0" prefWidth="311.0"
+               promptText="Ваша задача" styleClass="input1"/>
+    <AnchorPane fx:id="blackout" layoutY="1.0" prefHeight="400.0" prefWidth="535.0" styleClass="blackout"/>
+    <AnchorPane fx:id="menu" layoutX="159.0" layoutY="11.0" prefHeight="377.0" prefWidth="200.0" styleClass="fonMenu">
+        <Label fx:id="login" layoutX="25.0" layoutY="10.0" styleClass="h1" text="Login">
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </Label>
+        <Label layoutX="25.0" layoutY="57.0" styleClass="text1" text="Группа"/>
+        <Label layoutX="25.0" layoutY="97.0" styleClass="text1" text="Подгруппа"/>
+        <Label layoutX="25.0" layoutY="137.0" styleClass="text1" text="Тёмная тема"/>
+        <ToggleButton fx:id="darkStyle" layoutX="120.0" layoutY="134.0" mnemonicParsing="false"
+                      onAction="#darkStyle" prefHeight="25.0" prefWidth="53.0" styleClass="input1" text="Off"/>
+        <Button fx:id="closeMenuBut" layoutX="165.0" mnemonicParsing="false" onAction="#closeMenuBut"
+                styleClass="closeBut" text="❌"/>
+        <Button fx:id="OkMenuBut" layoutX="74.0" layoutY="338.0" mnemonicParsing="false" onAction="#OkMenuBut"
+                prefHeight="25.0" prefWidth="52.0" text="✓"/>
+        <PasswordField fx:id="newPassword" layoutX="21.0" layoutY="269.0" prefHeight="31.0" prefWidth="159.0"
+                       promptText="Новый пароль" styleClass="input"/>
+        <PasswordField fx:id="oldPassword" layoutX="21.0" layoutY="230.0" prefHeight="31.0" prefWidth="159.0"
+                       promptText="Старый пароль" styleClass="input"/>
+        <Label layoutX="51.0" layoutY="202.0" styleClass="text1" text="Смена пароля"/>
+        <ComboBox fx:id="group" layoutX="76.0" layoutY="54.0" prefHeight="25.0" prefWidth="98.0"
+                  styleClass="input1"/>
+        <ComboBox fx:id="subgroup" layoutX="104.0" layoutY="94.0" prefHeight="25.0" prefWidth="69.0"
+                  styleClass="input1">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Нет"/>
+                    <String fx:value="1"/>
+                    <String fx:value="2"/>
+                    <String fx:value="3"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label fx:id="notification" contentDisplay="TOP" layoutX="21.0" layoutY="310.0" prefHeight="17.0"
+               prefWidth="159.0" styleClass="info" textFill="WHITE"/>
+        <Button layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onAction="#out" prefHeight="25.0"
+                prefWidth="148.0" text="Выйти"/>
+    </AnchorPane>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="340.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="49.0" layoutY="29.0" text="Фамилия" />
+      <Label layoutX="49.0" layoutY="54.0" text="Имя" />
+      <Label layoutX="48.0" layoutY="79.0" text="Отчество" />
+      <TextField fx:id="surname" layoutX="111.0" layoutY="27.0" prefHeight="17.0" prefWidth="182.0" style="-fx-border-color: #4682B4; -fx-background-color: #B0E0E6; -fx-border-radius: 7;">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="name" layoutX="111.0" layoutY="52.0" prefHeight="10.0" prefWidth="182.0" style="-fx-background-color: #B0E0E6; -fx-border-color: #4682B4; -fx-border-radius: 7;">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="patronymic" layoutX="111.0" layoutY="78.0" prefHeight="10.0" prefWidth="182.0" style="-fx-background-color: #B0E0E6; -fx-border-color: #4682B4; -fx-border-radius: 7;">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <Label layoutX="55.0" layoutY="126.0" text="Специалист" />
+      <Label layoutX="20.0" layoutY="192.0" text="Дата приёма (дд.мм.гггг)" />
+      <Label layoutX="190.0" layoutY="192.0" text="Время приёма (чч:мм)" />
+      <Label layoutX="191.0" layoutY="126.0" text="Фамилия специалиста" />
+      <ComboBox fx:id="department" layoutX="22.0" layoutY="150.0" prefHeight="25.0" prefWidth="122.0" promptText="Отделение" style="-fx-background-color: #B0E0E6; -fx-border-color: #4682B4; -fx-border-radius: 7;" />
+      <DatePicker fx:id="dateReceipt" layoutX="22.0" layoutY="217.0" prefHeight="25.0" prefWidth="122.0" promptText="дд.мм.гггг" style="-fx-background-color: #B0E0E6; -fx-border-color: #4682B4; -fx-border-radius: 7;" />
+      <TextField fx:id="timeReceipt" alignment="TOP_CENTER" layoutX="220.0" layoutY="218.0" prefHeight="23.0" prefWidth="65.0" promptText="чч:мм" style="-fx-background-color: #B0E0E6; -fx-border-color: #4682B4; -fx-border-radius: 7;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Button fx:id="ok" layoutX="217.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #B0E0E6; -fx-border-color: #4682B4; -fx-border-radius: 20;" text="✓ OK" textAlignment="CENTER" />
+      <ComboBox fx:id="fullName" layoutX="192.0" layoutY="150.0" prefHeight="25.0" prefWidth="122.0" promptText="ФИО" style="-fx-background-color: #B0E0E6; -fx-border-color: #4682B4; -fx-border-radius: 7;" />
+   </children>
+</AnchorPane>
